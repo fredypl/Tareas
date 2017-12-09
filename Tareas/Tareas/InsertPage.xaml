@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tareas.InsertPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                
+                    <RowDefinition Height="35"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="ID:" Grid.Column="0" Grid.Row="0" VerticalOptions="Center"/>
+                <Entry x:Name="Entry_Id" Grid.Column="1" Grid.Row="0" Keyboard="Numeric" IsEnabled="False"/>
+
+                <Label Text="Titulo:" Grid.Column="0" Grid.Row="1" VerticalOptions="Center"/>
+                <Entry x:Name="Entry_Titulo" Grid.Column="1" Grid.Row="1"/>
+
+
+                <Label Text="Descrpcion:" Grid.Column="0" Grid.Row="2" VerticalOptions="Center"/>
+                <Entry x:Name="Entry_Descripcion" Grid.Column="1" Grid.Row="2"/>
+
+                <Label Text="PerAsig:" Grid.Column="0" Grid.Row="3" VerticalOptions="Center"/>
+                <Picker x:Name="Picker_PerAsig" Grid.Column="1" Grid.Row="3"/>
+
+                <Label Text="Prioridad:" Grid.Column="0" Grid.Row="4" VerticalOptions="Center"/>
+                <Picker x:Name="Picker_Prioridad" Grid.Column="1" Grid.Row="4" />
+
+                <Label Text="Fecha:" Grid.Column="0" Grid.Row="5" VerticalOptions="Center"/>
+                <DatePicker x:Name="Entry_Fecha" Grid.Column="1" Grid.Row="5" MaximumDate=" 2050-01-01" MinimumDate="2000-01-01"/>
+
+                <Label Text="Dependencia:" Grid.Column="0" Grid.Row="6" VerticalOptions="Center"/>
+                <Picker x:Name="Picker_Dependencia" Grid.Column="1" Grid.Row="6"/>
+
+                <Label Text="Status:" Grid.Column="0" Grid.Row="7" VerticalOptions="Center"/>
+                <Picker x:Name="Picker_Status" Grid.Column="1" Grid.Row="7"/>
+
+
+
+                <Button x:Name="Button_Insertar" Text="Insertar Tarea" Clicked="Button_Insertar_Clicked" Grid.Column="0" Grid.Row="8"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

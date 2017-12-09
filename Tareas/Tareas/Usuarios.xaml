@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tareas.Usuarios">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Items}" CachingStrategy="RecycleElement" ItemSelected="Lista_ItemSelected" x:Name="Lista">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+
+
+                                </Grid.RowDefinitions>
+                                <Label Text="Id:" Grid.Column="0" Grid.Row="0"/>
+                                <Label Text="{Binding Id}" Grid.Column="1" Grid.Row="0"/>
+                                <Label Text="Titulo:" Grid.Column="0" Grid.Row="1"/>
+                                <Label Text="{Binding Titulo}" Grid.Column="1" Grid.Row="1"/>
+                                <Label Text="Descripcion:" Grid.Column="0" Grid.Row="2"/>
+                                <Label Text="{Binding Descripcion}" Grid.Column="1" Grid.Row="2"/>
+                                <Label Text="PerAsig:" Grid.Column="0" Grid.Row="3"/>
+                                <Label Text="{Binding PerAsig}" Grid.Column="1" Grid.Row="3"/>
+                                <Label Text="Prioridad:" Grid.Column="0" Grid.Row="4"/>
+                                <Label Text="{Binding Prioridad}" Grid.Column="1" Grid.Row="4"/>
+                                <Label Text="Fecha:" Grid.Column="0" Grid.Row="5"/>
+                                <Label Text="{Binding Fecha}" Grid.Column="1" Grid.Row="5"/>
+                                <Label Text="Dependencia:" Grid.Column="0" Grid.Row="6"/>
+                                <Label Text="{Binding Dependencia}" Grid.Column="1" Grid.Row="6"/>
+                                <Label Text="Status:" Grid.Column="0" Grid.Row="7"/>
+                                <Label Text="{Binding Status}" Grid.Column="1" Grid.Row="7"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
